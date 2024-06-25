@@ -24,7 +24,7 @@ function AgregarProducto() {
 .then(data => {
     if (data == 'OK')
         {
-            alert('Producto creado correctamente');
+            alert('Producto creado exitosamente');
             html +=  `
             <button class="form-input-enviar" onclick="ObtenerIdCod()">Obtener idcod de producto creado</button>
             `
@@ -120,4 +120,35 @@ function ModificarProducto() {
             }
     })
     .catch(error => console.error('Error:', error));
+}
+
+function EliminarProducto() {
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+    })
+
+    if (confirm('¿Esta seguro de que desea eliminar el producto?'))
+        {
+            fetch(urlBase, {
+                method: 'DELETE',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify ({
+                    idcod: document.getElementById('idCod').value
+                })
+            })
+            .then(response => response.text())
+            .then(data => {
+                if (data == 'OK')
+                    {
+                        alert('Producto eliminado exitosamente');
+                    }
+                else
+                    {
+                        alert('Fallo al eliminar el producto');
+                    }
+            })
+            .catch(error => console.error('Error:', error));
+        }
 }
