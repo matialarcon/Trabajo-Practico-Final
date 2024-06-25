@@ -89,3 +89,35 @@ function MostrarIdCod(data) {
     }
     alert(idcod);
 }
+
+function ModificarProducto() {
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+    })
+
+    fetch(urlBase, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            idcod: document.getElementById('idCod').value,
+            titulo: document.getElementById('Titulo').value,
+            precioPeso: parseFloat(document.getElementById('precioPesos').value),
+            precioDolar: parseFloat(document.getElementById('precioDolares').value),
+            fecha: document.getElementById('Fecha').value
+        })
+    })
+    .then(response => response.text())
+    .then(data => {
+        if (data == 'OK')
+            {
+                alert('Producto modificado exitosamente');
+            }
+        else
+            {
+                alert('Fallo al modificar el producto');
+            }
+    })
+    .catch(error => console.error('Error:', error));
+}
