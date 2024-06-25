@@ -11,23 +11,16 @@
     <header>
         <img src="imagenes/logo.jpeg" alt="Logo empresa">
         <nav>
-            <p onclick="ObtenerProducto()">Mostrar todos los productos</p>
+            <div onclick="ObtenerProducto()">Mostrar todos los productos</div>
             <a href="Vender.html">Vender</a>
             <a href="Editar.html">Editar producto</a>
             <a href="Eliminar.html">Eliminar producto</a>
         </nav>
     </header>
 
-    <h1>Productos</h1>
+    <h1>Lista de productos</h1>
     
-    <table>
-        <tr>
-            <th>Titulo</th>
-            <th>Precio Pesos</th>
-            <th>Precio Dolar</th>
-            <th>Fecha</th>
-        </tr>
-        <tbody id ="tabla"></tbody>
+    <table id="tabla">
     </table>
 
     <footer>
@@ -48,7 +41,6 @@
             </ul>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
