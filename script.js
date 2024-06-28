@@ -152,3 +152,57 @@ function EliminarProducto() {
             .catch(error => console.error('Error:', error));
         }
 }
+
+function BuscarProducto() {
+
+    var contador = 0;
+    let html = `
+    <tr>
+        <th>Titulo</th>
+        <th>Precio Pesos</th>
+        <th>Precio Dolar</th>
+        <th>Fecha</th>
+    </tr>`;
+
+    let Buscador = document.getElementById('buscador').value;
+
+    fetch(urlBase)
+    .then(response => response.json())
+    .then(data => {
+        for (let i = 0; i < data.length; i++) {
+
+            if (data[i].titulo.toUpperCase().indexOf(Buscador.toUpperCase()) > -1)
+            {
+                html += ` 
+                <tbody>
+                <tr>
+                    <td>${data[i].titulo}</td>
+                    <td>${data[i].precioPeso}</td>
+                    <td>${data[i].precioDolar}</td>
+                    <td>${data[i].fecha}</td>
+                <td><button onclick="AgregarAlCarrito()">Agregar al carrito</button></td>
+                </tr>
+                </tbody>
+                `
+                contador++;
+            }
+        }
+
+        if (contador == 0)
+            {
+                html = ``;
+                document.getElementById('tabla').innerHTML = html + "No se encontraron productos";
+            }
+        else
+            {
+                document.getElementById('tabla').innerHTML = html;
+            }
+
+        if (Buscador == "")
+            {
+                document.getElementById('tabla').innerHTML = "";
+            }
+    }
+)
+    .catch(error => console.error('Error:', error));
+}
