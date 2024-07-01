@@ -1,6 +1,90 @@
-body{
+*{
     margin: 0;
-    background-color: rgb(142, 206, 238);
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+header{
+    background-color:rgb(49, 122, 218);
+    width: 100%;
+    height: 100px;
+}
+body{
+    background-color: rgb(250, 247, 241);
+    width: 100%;
+}
+footer{
+    background-color:rgb(49, 122, 218);
+    width: 100%;
+    position: relative;
+    top: 506px;
+}
+.buscador{
+    padding: 5px 200px 5px 10px;
+    position: relative;
+    bottom: 24px;
+    left: 75px;
+    width: 30%;
+}
+.btnMostrarTodo{
+    position: relative;
+    bottom: 24px;
+    left: 75px;
+    padding: 5px 2px;
+}
+.logo-empresa{
+    width: 10%;
+    margin: 0 0 10px 200px
+}
+nav{
+    position: relative;
+    left: 1200px;
+    bottom: 45px;
+    width: 30%;
+    font-family: Arial, Helvetica, sans-serif;
+    word-spacing: 20px;
+}
+.link-navegador{
+    color: black;
+    font-size: 20px;
+}
+h1{
+    margin-top: 40px;
+    text-align: center;
+}
+table{
+    margin: auto;
+    margin-top: 50px;
+    width: 50%;
+    text-align: center;
+    border-collapse: collapse;
+}
+th, td{
+    border: 1px solid black;
+    padding: 20px;
+}
+.logo-empresa-footer{
+    width: 10%;
+    margin: 50px 0 10px 200px
+}
+.pie-de-pagina{
+    position: relative;
+    left: 460px;
+    bottom: 65px;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 50px 0;
+}
+h4{
+    margin-bottom: 7px;
+}
+.fab{
+    padding: 2px;
+}
+.link-footer{
+    color: black;
 }
 .form{
     background-color: #ededed;
@@ -11,7 +95,13 @@ body{
     box-shadow: 0 0 30px black;
     max-width: 700px;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 100px;
+}
+p{
+    text-align: start;
+    margin: 20px 0 0 50px;
+    width: 90%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .form-input{
     width: 100%;
@@ -56,4 +146,280 @@ fieldset{
 }
 legend{
     padding: 6px;
+}
+.menu-hamburguesa-inicio{
+    width: 30px;
+    aspect-ratio: 1/1;
+    position: relative;
+    left: 1300px;
+    bottom: 85px;
+    display: none;
+}
+.menu-hamburguesa-secundario{
+    width: 30px;
+    aspect-ratio: 1/1;
+    position: relative;
+    left: 1300px;
+    bottom: 85px;
+    display: none;
+}
+.link{
+    color: black;
+    font-size: 50px;
+}
+#menu-hamburguesa{
+    display: none;
+}
+.ul-links{
+    width: 100%;
+    background-color: rgb(6, 73, 160);
+    position: absolute;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    height: 0;
+    overflow: hidden;
+    transition: all .3s;
+}
+#menu-hamburguesa:checked + .ul-links{
+    height: 400px;
+}
+@media (max-width: 1510px){
+    nav{
+        display: none;
+    }
+    .menu-hamburguesa-inicio{
+        display: block;
+        position: relative;
+        left: 1050px;
+        bottom: 51px;
+    }
+    .menu-hamburguesa-secundario{
+        display: block;
+        position: relative;
+        left: 1050px;
+        bottom: 51px;
+    }
+}
+@media (max-width: 1320px){
+    .logo-empresa{
+        position: relative;
+        right: 100px;
+    }
+    .buscador{
+        padding: 4px 10px 4px 0;
+        margin-left: -90px;
+    }
+    .btnMostrarTodo{
+        padding: 4px 0 4px 0;
+    }
+    .menu-hamburguesa-inicio{
+        margin-left: -170px;
+    }
+    .menu-hamburguesa-secundario{
+        margin-left: -100px;
+    }
+    .pie-de-pagina{
+        width: 40%;
+    }
+    footer{
+        margin-top: 405px;
+    }
+}
+@media (max-width: 1000px){
+    .menu-hamburguesa-secundario{
+        margin-left: -300px;
+        margin-top: 12px;
+    }
+    .logo-empresa-footer{
+        position: relative;
+        right: 100px;
+    }
+    .pie-de-pagina{
+        width: 50%;
+        margin-left: -200px;
+        margin-top: 25px;
+    }
+}
+@media (max-width: 925px){
+    .menu-hamburguesa-inicio{
+        margin-left: -300px;
+    }
+}
+@media (max-width: 794px){
+    .buscador{
+        margin-left: -160px;
+        position: relative;
+        top: -20px;
+    }
+    .btnMostrarTodo{
+        position: relative;
+        top: -20px;
+    }
+    .menu-hamburguesa-inicio{
+        position: relative;
+        margin-top: 6px;
+        margin-left: -480px;
+    }
+    .pie-de-pagina{
+        width: 65%;
+        margin-left: -250px;
+        margin-top: 30px;
+    }
+    .menu-hamburguesa-secundario{
+        margin-left: -400px;
+        margin-top: 16px;
+    }
+}
+@media (max-width: 694px){
+    .menu-hamburguesa-secundario{
+        margin-left: -500px;
+    }
+}
+@media (max-width: 652px){
+    .logo-empresa{
+        position: relative;
+        right: 150px;
+    }
+    .buscador{
+        padding: 1px 2px 1px 0;
+        margin-left: -200px;
+        position: relative;
+        top: -18px;
+    }
+    .btnMostrarTodo{
+        padding: 1px 2px 1px 0;
+        position: relative;
+        top: -18px;
+    }
+    .menu-hamburguesa-inicio{
+        position: relative;
+        margin-top: 10px;
+        margin-left: -550px;
+    }
+}
+@media (max-width: 628px){
+    .logo-empresa{
+        position: relative;
+        right: 170px;
+        top: 20px
+    }
+    .buscador{
+        padding: 0;
+        margin-left: -230px;
+        position: relative;
+        top: 5px;
+        width: 40%;
+    }
+    .btnMostrarTodo{
+        padding: 0;
+        position: relative;
+        top: 5px;
+    }
+    .menu-hamburguesa-inicio{
+        position: relative;
+        margin-top: 32px;
+        margin-left: -590px;
+    }
+    .pie-de-pagina{
+        width: 75%;
+        margin-left: -350px;
+        margin-top: 30px;
+    }
+    .logo-empresa-footer{
+        position: relative;
+        right: 165px;
+    }
+    .menu-hamburguesa-secundario{
+        margin-left: -605px;
+        margin-top: 30px;
+    }
+}
+@media (max-width: 505px){
+    .menu-hamburguesa-inicio{
+        position: relative;
+        margin-left: -610px;
+    }
+    .pie-de-pagina{
+        width: 82%;
+        margin-left: -380px;
+        margin-top: 35px;
+    }
+    .logo-empresa-footer{
+        position: relative;
+        right: 185px;
+    }
+}
+@media (max-width: 430px){
+    .pie-de-pagina{
+        margin-top: 38px;
+        flex-direction: column;
+    }
+    .logo-empresa{
+        position: relative;
+        right: 70px;
+        width: 70px;
+        height: 30px;
+    }
+    .buscador{
+        margin-left: -340px;
+        position: relative;
+        top: 45px;
+        width: 53%;
+    }
+    .btnMostrarTodo{
+        position: relative;
+        top: 45px;
+        margin-left: -2px;
+    }
+    .menu-hamburguesa-inicio{
+        position: relative;
+        margin-top: 70px;
+        margin-left: -715px;
+    }
+    .menu-hamburguesa-secundario{
+        margin-left: -750px;
+        margin-top: 30px;
+    }
+    p{
+        margin-left: 26px;
+        text-align: justify;
+    }
+    th, td{
+        padding: 5px;
+    }
+}
+@media (max-width: 375px){
+    .pie-de-pagina{
+        margin-top: 38px;
+        flex-direction: column;
+    }
+    .logo-empresa{
+        position: relative;
+        right: 70px;
+        width: 70px;
+        height: 30px;
+    }
+    .buscador{
+        margin-left: -340px;
+        position: relative;
+        top: 45px;
+        width: 53%;
+    }
+    .btnMostrarTodo{
+        position: relative;
+        top: 45px;
+        margin-left: -2px;
+    }
+    .menu-hamburguesa-inicio{
+        position: relative;
+        margin-top: 70px;
+        margin-left: -753px;
+    }
+    p{
+        margin-left: 10px;
+        text-align: justify;
+        font-size: 12px;
+    }
 }

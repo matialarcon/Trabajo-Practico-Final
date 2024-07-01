@@ -67,7 +67,6 @@ function MostrarProducto(data) {
             <td>${data[i].precioPeso}</td>
             <td>${data[i].precioDolar}</td>
             <td>${data[i].fecha}</td>
-            <td><button onclick="AgregarAlCarrito()">Agregar al carrito</button></td>
         </tr>
         </tbody>
     `
@@ -180,7 +179,6 @@ function BuscarProducto() {
                     <td>${data[i].precioPeso}</td>
                     <td>${data[i].precioDolar}</td>
                     <td>${data[i].fecha}</td>
-                <td><button onclick="AgregarAlCarrito()">Agregar al carrito</button></td>
                 </tr>
                 </tbody>
                 `

@@ -9,71 +9,90 @@
 </head>
 <body>
     <header>
-        <img src="imagenes/logo.jpeg" alt="Logo empresa">
+        <img src="imagenes/logo.png" alt="Logo empresa" class="logo-empresa">
         <nav>
-            <a href="index.html">Volver</a>
-            <a href="Editar.html">Editar producto</a>
-            <a href="Eliminar.html">Eliminar producto</a>
+            <a href="index.html" class="link-navegador">Inicio</a>
+            <a href="Editar.html" class="link-navegador">Editar</a>
+            <a href="Eliminar.html" class="link-navegador">Eliminar</a>
         </nav>
+        <label for="menu-hamburguesa">
+            <img src="imagenes/menuHamburguesa.png" class="menu-hamburguesa-secundario">
+        </label>
+        <input type="checkbox" id="menu-hamburguesa">
+
+        <ul class="ul-links">
+            <li>
+                <a href="index.html" class="link">Inicio</a>
+            </li>
+            <li>
+                <a href="Editar.html" class="link">Editar</a>
+            </li>
+            <li>
+                <a href="Eliminar.html" class="link">Eliminar</a>
+            </li>
+        </ul>
     </header>
 
-    <form class="form">
-        <h1 class="form-title">FORMULARIO</h1>
-        <fieldset>
-            <legend>INFORMACIÓN DEL PRODUCTO</legend>   
-            <div>
-                <label>Título
-                <input class="form-input" type="text" id="Titulo" required>
-                </label>
-            </div>
-            <div>    
-                <label>Precio en pesos
-                <input class="form-input" type="number" id="precioPesos" required>
-                </label>
-            </div>
-            <div>    
-                <label>Precio en dolares
-                <input class="form-input" type="number" id="precioDolares" required>
-                </label>
-            </div>
-            <div>    
-                <label>Fecha
-                <input class="form-input" type="date" id="Fecha" required>
-                </label>
-            </div>
-            <div>
-                <button class="form-input-enviar" onclick="AgregarProducto()">Cargar producto</button>
-            <div id="button-obtenerIdCod"></div>
-            </div>
-        </fieldset>  
-    </form>
+    <section>
+        <form class="form">
+            <h1 class="form-title">FORMULARIO</h1>
+            <fieldset>
+                <legend>INFORMACIÓN DEL PRODUCTO</legend>   
+                <div>
+                    <label>Título
+                    <input class="form-input" type="text" id="Titulo" required>
+                    </label>
+                </div>
+                <div>    
+                    <label>Precio en pesos
+                    <input class="form-input" type="number" id="precioPesos" required>
+                    </label>
+                </div>
+                <div>    
+                    <label>Precio en dolares
+                    <input class="form-input" type="number" id="precioDolares" required>
+                    </label>
+                </div>
+                <div>    
+                    <label>Fecha
+                    <input class="form-input" type="date" id="Fecha" required>
+                    </label>
+                </div>
+                <div>
+                    <button class="form-input-enviar" onclick="AgregarProducto()">Cargar producto</button>
+                <div id="button-obtenerIdCod"></div>
+                </div>
+            </fieldset>  
+        </form>
+    </section>
 
     <footer>
-        <img src="imagenes/logo.jpeg" alt="Logo empresa">
-        <div>
-            <h4>Acerca de nosotros</h4>
-            <ul>
-                <li>Mail: tecnoworld069@gmail.com</li>
-                <li>teléfono: +54 9 3564 12-3456</li>
-            </ul>
-        </div>
-        <div>
-            <h4>Compañia</h4>
-            <ul>
-                <li><a href="PoliticaPrivacidad.html">Política de privacidad</a></li>
-                <li><a href="TerminosYCondiciones.html">Términos y condiciones</a></li>
-            </ul>
-        </div>
-        <div>
-            <h4>Síguenos</h4>
-            <ul>
-                <a href="https://es-la.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                <a href="https://ar.linkedin.com/"><i class="fab fa-linkedin"></i></a>
-            </ul>
+        <img src="imagenes/logo.png" alt="Logo empresa" class="logo-empresa-footer">
+        <div class="pie-de-pagina">
+            <div>
+                <h4>Acerca de nosotros</h4>
+                <ul>
+                    <li>Mail: tecnoworld069@gmail.com</li>
+                    <li>teléfono: +54 9 3564 12-3456</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Compañia</h4>
+                <ul>
+                    <li><a href="PoliticaPrivacidad.html" class="link-footer">Política de privacidad</a></li>
+                    <li><a href="TerminosYCondiciones.html" class="link-footer">Términos y condiciones</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Síguenos</h4>
+                <ul>
+                    <a href="https://es-la.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://ar.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </ul>
+            </div>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
